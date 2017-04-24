@@ -29,6 +29,10 @@ public class loginCtrl extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String tipoUsuario = request.getParameter("tipoUsuario");
+        
         
     }
 

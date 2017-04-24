@@ -38,9 +38,11 @@
                  <div class="form-group" align="center">
                  	<label>Tipo de usuario</label>
                       <div class="radio">
-		                     <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
+		                     <label class="radio-inline"><input type="radio" value="Estudiante" name="tipousuario">Estudiante </label>
 
-		                     <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
+		                     <label class="radio-inline"><input type="radio" value="Docente" name="tipousuario"> Docente </label>
+		                     <label class="radio-inline"><input type="radio" value="Administrador" name="tipousuario"> Administrador </label>
+
                        </div>
 
                  </div>
