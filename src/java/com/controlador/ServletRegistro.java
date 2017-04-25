@@ -10,6 +10,7 @@ import com.modelo.Estudiante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author damian
  */
-public class CrearUsuarioCtrl extends HttpServlet {
+@WebServlet(name = "ServletRegistro", urlPatterns = {"/ServletRegistro"})
+public class ServletRegistro extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,29 +34,41 @@ public class CrearUsuarioCtrl extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        String nombres = request.getParameter("nombres");
-        String apelildos = request.getParameter("apellidos");
-        String tipoIdentifiacion = request.getParameter("tipoIdentificacion");
-        String numIdentificacion = request.getParameter("numIdentificacion");
-        String correo = request.getParameter("correo");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String tipoUsuario = request.getParameter("tipoUsuario");
-        String accion = request.getParameter("accion");
-        HttpSession sesion = request.getSession();
-        if(accion.equals("crear")){
-            if(tipoUsuario.equals("docente")){
-                String especialidad = request.getParameter("especialidaddocente");
-                Docente docente = new Docente(especialidad, nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
-                sesion.setAttribute("docente", docente);
-            }else if(tipoUsuario.equals("estudiante")){
-                Estudiante estudiante = new Estudiante(nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
-                sesion.setAttribute("estudiante", estudiante);
-            }
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-        }
         
-    }
+            String nombres = request.getParameter("nombres");
+            String apelildos = request.getParameter("apellidos");
+            String tipoIdentifiacion = request.getParameter("tipoIdentificacion");
+            int numIdentificacion = Integer.parseInt(request.getParameter("numidentifica"));
+            String correo = request.getParameter("correo");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            String tipoUsuario = request.getParameter("tipoUsuario");
+            String accion = request.getParameter("accion");
+            
+            HttpSession sesion = request.getSession();
+            String mensaje;
+            
+            if(accion.equals("crear")){
+                if(tipoUsuario.equals("docente")){
+                    String especialidad = request.getParameter("especialidaddocente");
+                    Docente docente = new Docente(especialidad, nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
+                    int rows = docente.registrarUsuario();
+                    if(rows==1){
+                        mensaje = "Registro de docente exitoso";
+                        sesion.setAttribute("docente", docente);
+                    }
+                }else if(tipoUsuario.equals("estudiante")){
+                    Estudiante estudiante = new Estudiante(nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
+                    int rows = estudiante.registrarUsuario();
+                    if(rows==1){
+                        mensaje = "Registro de estudiante exitoso";
+                        sesion.setAttribute("estudiante", estudiante);
+                    }
+                }
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+        
+        }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

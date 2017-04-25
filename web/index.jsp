@@ -8,46 +8,102 @@
 	           <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body style="background-color: black;" background="img/index.jpg">
+<body style="background-color: #008080;" background="">
 	<div class="container-fluid">
-		<div class="row" style="margin-top: 40px;">
-			<div class="col-md-6 " align="center">
-                            <a href="login.jsp"><button class="btn btn-success" ><span class=" glyphicon glyphicon-user"></span> Iniciar Sesion</button></a>
-			</div>
-			<div class="col-md-6" align="center">
-                            <a href="registro.jsp"><button class="btn btn-info"><span class=" glyphicon glyphicon-download-alt"></span> Registrarse</button></a>
+	<div class="row">
+			<div class="col-md-12" align="center" style="text-shadow: 3px 2px black;">
+			<legend style="font-style: oblique; font"><h1><span style="color :red;font-size: 60px;">AULA</span> <span style="color:blue ;font-size: 60px;">VIRTUAL</span></h1></legend>
 			</div>
 		</div>
-       <div class="row" align="center">
-       	 <img src="img/logo.png" alt="" width="300" height="300">
-       </div>
-       <div class="row">
+		<div class="row" style="margin-top: 10px;">
+			<div class="col-md-6 " align="center">
+				<a href="login.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Iniciar Sesion</button></a>
+			</div>
+			<div class="col-md-6" align="center">
+			<a href="register.jsp"><button class="btn btn-info"><span class=" glyphicon glyphicon-download-alt"></span> Registrarse</button></a>
+			</div>
+		</div>
+
+		
+
+<div class="row" style="padding-top: 10px;">
+  <div class="col-md-12">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+           <!--Indicadores-->
+    <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1" ></li>
+      <li data-target="#carousel" data-slide-to="2" ></li>
+      <li data-target="#carousel" data-slide-to="3" ></li>
+     
+    </ol>
+
+    <!--contenedro slider-->
+<div class="carousel-inner" role="listbox">
+     <div class="item active">
+         <img src="img/slide/slide1.jpg"  class="image-responsive" width="2001" height="604" > 
+           <div class="carousel-caption">
+           <h2>REGISTRATE AHORA MISMO</h2>
+            <button class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span> Registate Aqui</button>
+         </div>
+     </div> 
+
+<div class="item">
+         <img src="img/slide/slide2.jpg"  class="image-responsive"  width="2001" height="604"> 
+           <div class="carousel-caption">
+           <h2>FACIL,RAPIDO,SENCILLO </h2>
+          
+         </div>
+     </div> 
+
+     <div class="item">
+         <img src="img/slide/slide3.jpg"   > 
+           <div class="carousel-caption" >
+           
+           <H2 >CURSOS NUEVOS </H2>
+         </div>
+     </div> 
+ <div class="item">
+         <img src="img/slide/slide4.jpg"   width="2001" height="604"> 
+           <div class="carousel-caption"  >
+           
+           <H2 >CONOCIMIENTO A TU ALCANCE</H2>
+         </div>
+     </div> 
+
+
+    </div>
+</div>
+</div>
+</div>
+       <div class="row" style="margin-top: 20px;">
        	<div class="col-md-4">
        
-       		<div class="thumbnail" align="center">
-       			<span class="glyphicon glyphicon-ok" style="font-size: 30px; color:green;" ></span>
+       		<div class="thumbnail" align="center" style="background-color: red;">
+       			<span class="glyphicon glyphicon-ok" style="font-size: 30px; color:green;"></span>
        			<div class="caption">
-       			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illo molestiae, quia perferendis eaque accusamus aliquam! Itaque ad eius iste, doloremque, debitis unde facere earum iure vitae voluptate, delectus laboriosam!</p>
+       <p style="color: white;">Buenos contenidos,actividades que fomentan el aprendizaje, y cursos actualizados disponibles para ti constantemenre esto y mucho mas encontraras en Aulavirtual.com</p>
        		</div>
        		</div>
        		</div>
-       	
+       
        	<div class="col-md-4">
-       		<div class="thumbnail" align="center">
+       		<div class="thumbnail" align="center" style="background-color: red;">
        		<span class="glyphicon glyphicon-user " style="font-size: 30px; color:green;"></span>
        			<div class="caption">
-       			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illo molestiae, quia perferendis eaque accusamus aliquam! Itaque ad eius iste, doloremque, debitis unde facere earum iure vitae voluptate, delectus laboriosam!</p>
+       			<p style="color:white;">Nuestro equipo de formadores son expertos reconocidos en software, negocios creatividad y otras areas del conociemiento, adaptan los contenidos de acuerdo a tu nivel de aprendizaje y los presentan en breves y prácticas acividades o material de estudio.</p>
        		</div>
        		</div>
        		
        	</div>
        	<div class="col-md-4">
        	
-       		<div class="thumbnail" align="center">
+       		<div class="thumbnail" align="center"w style="background-color: red;">
        		<span class="glyphicon glyphicon-pencil" style="font-size: 30px; color:green;"></span>
        			<div class="caption">
-       			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illo molestiae, quia perferendis eaque accusamus aliquam! Itaque ad eius iste, doloremque, debitis unde facere earum iure vitae voluptate, delectus laboriosam!</p>
-       		</div>
+
+       			<p style="color: white;">Evaluaciones que permitiran evaluar a los deocentes y evaluarte a ti mismo ,el nivel de apripiacion sobre los temas del curso y saber que tendras que reforzar recuerda que estas en un proceso de aprendizaje y aveces hay cosas que se pasan por alto </p>
+       		   </div>
        		</div>
        		</div>
        	</div>

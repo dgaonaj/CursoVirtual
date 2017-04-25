@@ -33,21 +33,21 @@
                   </div>
                   <div class="form-group">                   	                 
  					<label>Password</label>
- 					<input type="password" class="form-control"	name=password placeholder="Digite su contraseña">
+ 					<input type="password" class="form-control"	name=password placeholder="Digite su contraseÃ±a">
                  </div>
                  <div class="form-group" align="center">
                  	<label>Tipo de usuario</label>
                       <div class="radio">
-		                     <label class="radio-inline"><input type="radio" value="Estudiante" name="tipousuario">Estudiante </label>
+		                     <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
 
-		                     <label class="radio-inline"><input type="radio" value="Docente" name="tipousuario"> Docente </label>
-		                     <label class="radio-inline"><input type="radio" value="Administrador" name="tipousuario"> Administrador </label>
+		                     <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
+		                     <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsario"> Administrador </label>
 
                        </div>
 
                  </div>
                  <div class="form-group" align="center">
-                 	<button class="btn btn-success" onclick="submit();">Ingresar</button>
+                 	<button class="btn btn-success" onclick="submit();" name="accion" value="ingresar">Ingresar</button>
                  </div>
  				</form>
  			</div>

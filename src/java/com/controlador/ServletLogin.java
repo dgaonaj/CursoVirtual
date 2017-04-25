@@ -5,6 +5,7 @@
  */
 package com.controlador;
 
+import com.modelo.Estudiante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author damian
  */
-public class loginCtrl extends HttpServlet {
+public class ServletLogin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,8 +33,16 @@ public class loginCtrl extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String tipoUsuario = request.getParameter("tipoUsuario");
+        String accion = request.getParameter("accion");
+
         
-        
+        if(accion.equals("ingresar")){
+            if(tipoUsuario.equals("estudiante")){
+                
+                Estudiante estu = new Estudiante();
+                estu.login();
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

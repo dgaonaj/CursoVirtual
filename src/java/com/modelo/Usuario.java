@@ -15,7 +15,7 @@ public abstract class Usuario {
     private String apellidos;
     private String correo;
     private String tipoIdentifica;
-    private String numIdentifica;
+    private int numIdentifica;
     private String tipoUsuario;
     private String username;
     private String password;
@@ -23,7 +23,7 @@ public abstract class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombres, String apellidos, String correo, String tipoIdentifica, String numIdentifica, String tipoUsuario, String username, String password) {
+    public Usuario(String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.correo = correo;
@@ -66,11 +66,11 @@ public abstract class Usuario {
         this.tipoIdentifica = tipoIdentifica;
     }
 
-    public String getNumIdentifica() {
+    public int getNumIdentifica() {
         return numIdentifica;
     }
 
-    public void setNumIdentifica(String numIdentifica) {
+    public void setNumIdentifica(int numIdentifica) {
         this.numIdentifica = numIdentifica;
     }
 
@@ -98,6 +98,6 @@ public abstract class Usuario {
         this.password = password;
     }
     
-    public abstract void editarUsuario();
+    public abstract int registrarUsuario();
     
 }

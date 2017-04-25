@@ -5,6 +5,8 @@
  */
 package com.modelo;
 
+import com.BD.DocenteJDBC;
+
 /**
  *
  * @author Amelia
@@ -20,7 +22,7 @@ public class Docente extends Usuario {
         this.especialidad = especialidad;
     }
 
-    public Docente(String especialidad, String nombres, String apellidos, String correo, String tipoIdentifica, String numIdentifica, String tipoUsuario, String username, String password) {
+    public Docente(String especialidad, String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password) {
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
         this.especialidad = especialidad;
     }
@@ -34,9 +36,10 @@ public class Docente extends Usuario {
     }
 
     @Override
-    public void editarUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int registrarUsuario(){
+        
+        DocenteJDBC docentJDBC = new DocenteJDBC();      
+        return docentJDBC.insertDocente(especialidad, getNombres(), getApellidos(), getCorreo(), getTipoIdentifica(), getNumIdentifica(), getTipoUsuario(), getUsername(), getPassword());
     }
-    
-    
+
 }
