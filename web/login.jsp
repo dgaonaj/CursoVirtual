@@ -8,8 +8,13 @@
 	           <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body background="img/fondo_registro.jpg">
+<body style="background-color:#FFF8DC">
 <div class="container-fluid">
+     <div class="row">
+                <div class="col-md-4"align="center" style="margin-top: 20px;">
+                    <a href="index.jsp"><button class="btn btn-success"><span class="glyphicon glyphicon-chevron-left"></span> volver</button></a>
+                </div>
+     </div>
  		<div class="row">
  		     <div class="col-md-12" align="center">
  		     	<img src="img/logo.png" alt="" width="225" height="225">
@@ -45,6 +50,8 @@
                                     </div>
                                            <div class="form-group" align="center">
                                                   <button class="btn btn-success" onclick="submit();" name="accion" value="ingresar">Ingresar</button>
+                                                  <button class="btn btn-danger"  name="accion" value="cancelar">Cancelar</button>
+
                                            </div>
  				</form>
  			</div>

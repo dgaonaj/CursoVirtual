@@ -21,11 +21,16 @@
         </script>
 </head>
     <body background="img/fondo_registro1.jpg">
-        <div class="container-fluid">  		 		
+        <div class="container-fluid"> 
+ <div class="row">
+                <div class="col-md-4"align="center" style="margin-top: 10px;">
+                    <a href="index.jsp"><button class="btn btn-success"><span class="glyphicon glyphicon-chevron-left"></span> volver</button></a>
+                </div>
+            </div>            
             <div class="row">
  		<div class="col-md-3">  			
  		</div>
-                <div class="col-md-6 " style="margin-top: 50px; background-color: white ;">
+                <div class="col-md-6 " style="margin-top: 20px; background-color: white ;">
                     <form name ="registro" action="ServletRegistro">
                         <div align="center">
                             <legend align="center">Formulario De Registro</legend>
@@ -81,6 +86,8 @@
                         </div>
                         <div class="form-group" align="center">
                             <button class="btn btn-success" onclick="submit();" name="accion" value="crear">Registrar</button>
+                            <button class="btn btn-danger"  name="accion" value="cancelar">Cancelar</button>
+
                         </div>
                     </form>
  			</div>
