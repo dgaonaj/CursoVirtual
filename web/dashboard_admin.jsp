@@ -71,7 +71,7 @@
                              <div>
                                  <caption>
                                      <div style="margin-top: 20px;">
-                                     <a href="Asignar_Docente.jsp"><button class="btn btn-success"><span class="glyphicon glyphicon-user"></span> Asignar Docente</button></a>
+                                     <a href="asignar_docente.jsp"><button class="btn btn-success"><span class="glyphicon glyphicon-user"></span> Asignar Docente</button></a>
                                      </div>
                                  </caption>
                              </div>
