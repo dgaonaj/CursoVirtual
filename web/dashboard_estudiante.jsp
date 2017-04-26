@@ -10,44 +10,45 @@
 </head>
 <body background="img/fondo_registro1.jpg">
      <div class="container-fluid">
-     <div class="row" align="center">
-     	<cdiv class="col-md-12">
+        <div class="row" align="center">
+            <div class="col-md-12">
      		<h1 style="font-style: verdana; color: green;">BIENVENIDO ESTUDIANTE : </h1>
-     	</cdiv>
-     </div>
+     	    </div>
+        </div>
      	<div class="row" style="margin-top: 50px;">
-     	<div class="col-md-8">
-     	 <div class="panel-group">
-    <div class="panel panel-success" align="center">
-      <div class="panel-heading">Cursos Disponibles</div>
-      <div class="panel-body">Panel Content</div>
-    </div>
+            <div class="col-md-8">
+                <div class="panel-group">
+                    <div class="panel panel-success" align="center">
+                        <div class="panel-heading">Cursos Disponibles</div>
+                            <div class="panel-body">Panel Content</div>
+                    </div>
 
-    <div class="panel panel-primary" align="center">
-      <div class="panel-heading">Cursos en los cuales esta inscrito</div>
-      <div class="panel-body">Panel Content</div>
-    </div>
-    </div>
-    </div>
+                    <div class="panel panel-primary" align="center">
+                        <div class="panel-heading">Cursos en los cuales esta inscrito</div>
+                           <div class="panel-body">Panel Content</div>
+                       </div>
+                   </div>
+            </div>
     <div class="row">
-<div class="col-md-3">
-    <div class="thumbnail" align="center" style="background-color: red; color: white;">
-    	<span class="glyphicon glyphicon-pencil" style="font-size: 25px;"></span>
-    	<div>
-    	<caption>
-    		<button class="btn btn-primary">Editar Informacion</button>
-    	</caption>
-    	</div>
-    </div>
-     <div class="thumbnail" align="center" style="background-color: blue; color: white;">
-    	<span class="glyphicon glyphicon-share-alt" style="font-size: 25px;"></span>
-    	<div>
-    	<caption>
-    		<button class="btn btn-success">Inscribir Curso</button>
-    	</caption>
-    	</div>
-    </div>
+        <div class="col-md-3">
+                        <div class="thumbnail" align="center" style="background-color: red; color: white;">
+                                 <span class="glyphicon glyphicon-pencil" style="font-size: 25px;"></span>
+                             <div>
+                                 <caption>
+                                     <button class="btn btn-primary">Editar Informacion</button>
+                                 </caption>
+                             </div>
+                        </div>
+                  <div class="thumbnail" align="center" style="background-color: blue; color: white;">
+                     <span class="glyphicon glyphicon-share-alt" style="font-size: 25px;"></span>
+                         <div>
+                             <caption>
+                                 <button class="btn btn-success">Inscribir Curso</button>
+                             </caption>
+                         </div>
+                 </div>
     
+        </div>
     </div>
 </div>
 	<!-- Latest compiled and minified JavaScript -->

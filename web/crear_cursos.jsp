@@ -13,44 +13,37 @@
 		<div class="row">
 			<div class="col-md-12" align="center">
 				<legend style="font-size: 25px; ">Crear Curso</legend>
-				
-				</div>
-				<div class="col-md-6 col-md-offset-3" align="center">
+                        </div>
+			<div class="col-md-6 col-md-offset-3" align="center">
 					<div>
 						<img src="img/cursos.jpg" alt="">
 					</div>
-					<div>
-					<form action="">
-					<div class="form-group">
-						<label>ID del Curso:</label>
-							<input type="text" class="form-control" name="idcurso" placeholder="Ingresa el id del curso">
-					</div>
-						<div class="form-group">
-					<label>Nombre del Curso:</label>
+			<div>
+				<form action="">
+			            <div class="form-group">
+					        <label>Nombre del Curso:</label>
 						<input type="text" class="form-control" name="nombrecurso" placeholder="Ingresa el nombre del curso">
-												</div>
-												<div class="form-group">
+				    </div>
+				    <div class="form-group">
 						<label>Fecha inicio del Curso: dd/mm/aa</label>
-							<input type="text" class="form-control" name="fechini" placeholder="Ingresa la fecha de inicio del curso">
-					</div>
-					<div class="form-group">
+						<input type="text" class="form-control" name="fechini" placeholder="Ingresa la fecha de inicio del curso">
+				    </div>
+				    <div class="form-group">
 						<label>Duracion:</label>
-							<input type="text" class="form-control" name="Duracion" placeholder="Ingresa la Duracion curso">
-					</div>
-						<div class="form-group">
-					<label>Cantidad Maxima:</label>
+						<input type="text" class="form-control" name="Duracion" placeholder="Ingresa la Duracion curso">
+				    </div>
+				    <div class="form-group">
+					        <label>Cantidad Maxima:</label>
 						<input type="text" class="form-control" name="cantmaxima" placeholder="Ingresa la cantidd maxima de estudiantes">
 						<div style="margin-top: 20px;">
-						  <button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Crear Curso</button>
+						   <button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Crear Curso</button>
 						</div>
-						</div>
-					</form>
-					</div>
-				</div>
+				    </div>
+				</form>
 			</div>
+		   </div>
 		</div>
 	</div>
-
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@
 	           <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body style="background-color: #008080;" background="">
+<body style="background-color: 	#DEB887;" background="">
 	<div class="container-fluid">
 	<div class="row">
 			<div class="col-md-12" align="center" style="text-shadow: 3px 2px black;">
@@ -51,7 +51,7 @@
 <div class="item">
          <img src="img/slide/slide2.jpg"  class="image-responsive"  width="2001" height="604"> 
            <div class="carousel-caption">
-           <h2>FACIL,RAPIDO,SENCILLO </h2>
+               <h2 style="color:blue">FACIL,RAPIDO,SENCILLO </h2>
           
          </div>
      </div> 
@@ -60,14 +60,14 @@
          <img src="img/slide/slide3.jpg"   > 
            <div class="carousel-caption" >
            
-           <H2 >CURSOS NUEVOS </H2>
+           <H2 style="color: blue">CURSOS NUEVOS </H2>
          </div>
      </div> 
  <div class="item">
          <img src="img/slide/slide4.jpg"   width="2001" height="604"> 
            <div class="carousel-caption"  >
            
-           <H2 >CONOCIMIENTO A TU ALCANCE</H2>
+           <H2 style="color:blue">CONOCIMIENTO A TU ALCANCE</H2>
          </div>
      </div> 
 
