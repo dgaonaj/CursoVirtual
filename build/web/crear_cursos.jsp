@@ -1,5 +1,5 @@
 <% 
-String administrador = request.getParameter("administrador");
+String administrador = "";
 if(!administrador.isEmpty()){
 %>
 <!DOCTYPE html>

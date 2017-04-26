@@ -54,6 +54,7 @@ public class ServletLogin extends HttpServlet {
                     request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);                    
                 }else{
                     mensaje="Login Incorrecto";
+                    sesion.setAttribute("estudiante", "");
                     sesion.setAttribute("mensaje", mensaje);
                     request.getRequestDispatcher("login.jsp").forward(request, response);                  
                 }
@@ -68,6 +69,7 @@ public class ServletLogin extends HttpServlet {
                         request.getRequestDispatcher("index.jsp").forward(request, response); 
                     }else{
                         mensaje="Login Incorrecto";
+                        sesion.setAttribute("docente", "");
                         sesion.setAttribute("mensaje", mensaje);
                         request.getRequestDispatcher("login.jsp").forward(request, response); 
                     }
@@ -82,6 +84,7 @@ public class ServletLogin extends HttpServlet {
                             request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
                         }else{
                             mensaje="Login Incorrecto";
+                            sesion.setAttribute("administrador", "");
                             sesion.setAttribute("mensaje", mensaje);
                             request.getRequestDispatcher("login.jsp").forward(request, response);
                         }

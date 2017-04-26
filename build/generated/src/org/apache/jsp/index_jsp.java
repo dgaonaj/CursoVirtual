@@ -58,6 +58,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<legend style=\"font-style: oblique; font\"><h1><span style=\"color :red;font-size: 60px;\">AULA</span> <span style=\"color:blue ;font-size: 60px;\">VIRTUAL</span></h1></legend>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
+      out.write("        ");
+
+            HttpSession sesion = request.getSession(false); 
+            String estudiante = (String) sesion.getAttribute("usuario");
+            String docente = (String) sesion.getAttribute("docente");
+            String administrador = (String) sesion.getAttribute("administrador");
+            if(estudiante.isEmpty() && docente.isEmpty() && administrador.isEmpty()){ 
+        
+      out.write("\r\n");
       out.write("\t\t<div class=\"row\" style=\"margin-top: 10px;\">\r\n");
       out.write("\t\t\t<div class=\"col-md-6 \" align=\"center\">\r\n");
       out.write("\t\t\t\t<a href=\"login.jsp\"><button class=\"btn btn-success\"><span class=\" glyphicon glyphicon-user\"></span> Iniciar Sesion</button></a>\r\n");
@@ -66,6 +75,33 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<a href=\"register.jsp\"><button class=\"btn btn-info\"><span class=\" glyphicon glyphicon-download-alt\"></span> Registrarse</button></a>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
+      out.write("            ");
+ }else if(!estudiante.isEmpty()){ 
+      out.write("\r\n");
+      out.write("            <div class=\"row\" style=\"margin-top: 10px;\">\r\n");
+      out.write("\t\t\t<div class=\"col-md-6 \" align=\"center\">\r\n");
+      out.write("\t\t\t\t<a href=\"dashboard_estudiante.jsp\"><button class=\"btn btn-success\"><span class=\" glyphicon glyphicon-user\"></span> Dashboard</button></a>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("            \r\n");
+      out.write("            ");
+ }else if(!docente.isEmpty()){ 
+      out.write("\r\n");
+      out.write("            <div class=\"row\" style=\"margin-top: 10px;\">\r\n");
+      out.write("\t\t\t<div class=\"col-md-6 \" align=\"center\">\r\n");
+      out.write("\t\t\t\t<a href=\"dashboard_docente.jsp\"><button class=\"btn btn-success\"><span class=\" glyphicon glyphicon-user\"></span> Dashboard</button></a>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("            ");
+ }else if(!administrador.isEmpty()){ 
+      out.write("\r\n");
+      out.write("            <div class=\"row\" style=\"margin-top: 10px;\">\r\n");
+      out.write("\t\t\t<div class=\"col-md-6 \" align=\"center\">\r\n");
+      out.write("\t\t\t\t<a href=\"dashboard_admin.jsp\"><button class=\"btn btn-success\"><span class=\" glyphicon glyphicon-user\"></span> Dashboard</button></a>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("            ");
+ } 
       out.write("\r\n");
       out.write("\t\t\r\n");
       out.write("\r\n");

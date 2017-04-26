@@ -15,40 +15,7 @@
 			<legend style="font-style: oblique; font"><h1><span style="color :red;font-size: 60px;">AULA</span> <span style="color:blue ;font-size: 60px;">VIRTUAL</span></h1></legend>
 			</div>
 		</div>
-        <%
-            String estudiante = request.getParameter("estudiante");
-            String docente = request.getParameter("docente");
-            String administrador = request.getParameter("administrador");
-            if(estudiante.isEmpty() && docente.isEmpty() && administrador.isEmpty()){ 
-        %>
-		<div class="row" style="margin-top: 10px;">
-			<div class="col-md-6 " align="center">
-				<a href="login.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Iniciar Sesion</button></a>
-			</div>
-			<div class="col-md-6" align="center">
-			<a href="register.jsp"><button class="btn btn-info"><span class=" glyphicon glyphicon-download-alt"></span> Registrarse</button></a>
-			</div>
-		</div>
-            <% }else if(!estudiante.isEmpty()){ %>
-            <div class="row" style="margin-top: 10px;">
-			<div class="col-md-6 " align="center">
-				<a href="dashboard_estudiante.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
-			</div>
-		</div>
-            
-            <% }else if(!docente.isEmpty()){ %>
-            <div class="row" style="margin-top: 10px;">
-			<div class="col-md-6 " align="center">
-				<a href="dashboard_docente.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
-			</div>
-		</div>
-            <% }else if(!administrador.isEmpty()){ %>
-            <div class="row" style="margin-top: 10px;">
-			<div class="col-md-6 " align="center">
-				<a href="dashboard_admin.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
-			</div>
-		</div>
-            <% } %>
+        
 		
 
 <div class="row" style="padding-top: 10px;">
