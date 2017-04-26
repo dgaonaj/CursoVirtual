@@ -39,6 +39,8 @@
                  </div>
                      <div style="margin:19px;" align="center">
                      	<button class="btn btn-info" style="font-size: 20px;"><span class="glyphicon glyphicon-pencil"> Editar</span></button>
+                        <button class="btn btn-danger" style="font-size: 20px;"><span class="glyphicon glyphicon-remove">Cancelar</span></button>
+
                      </div>
                 </form>
 		</div>
