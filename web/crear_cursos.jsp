@@ -37,6 +37,8 @@
 						<input type="text" class="form-control" name="cantmaxima" placeholder="Ingresa la cantidd maxima de estudiantes">
 						<div style="margin-top: 20px;">
 						   <button class="btn btn-success" class="glyphicon glyphicon-ok" name="accion" value="crear"> Crear Curso</button>
+                                                   <button class="btn btn-danger" class="glyphicon glyphicon-ok" name="accion" value="cancelar"> Cancelar</button>
+
 						</div>
 				    </div>
 				</form>
