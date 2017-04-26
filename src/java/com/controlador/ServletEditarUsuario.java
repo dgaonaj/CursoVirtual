@@ -37,9 +37,22 @@ public class ServletEditarUsuario extends HttpServlet {
         String password = request.getParameter("password");
         String correo = request.getParameter("correo");
         String accion = request.getParameter("accion");
+        String tipoUsuario = request.getParameter("tipoUsuario");
         if(accion.equals("editar")){
-            
-            request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);
+            if(tipoUsuario.equals("estudiante")){
+                String idEstudiante = request.getParameter("estudiante");
+                
+                request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);
+            }else if(tipoUsuario.equals("docente")){
+                
+                
+                String idDocente = request.getParameter("docente");
+                request.getRequestDispatcher("dashboard_docente.jsp").forward(request, response);
+            }else if(tipoUsuario.equals("administrador")){
+                
+                String idAdmin = request.getParameter("administrador");
+                request.getRequestDispatcher("dashboard_admin.jsp").forward(request, response);
+            }
         }
                 
         

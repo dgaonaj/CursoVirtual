@@ -37,6 +37,18 @@
                             <label>Correo:</label>	
  					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
                  </div>
+                <%
+                    String estudiante = request.getParameter("estudiante");
+                    String docente = request.getParameter("docente");
+                    String administrador = request.getParameter("administrador");
+                    if(!estudiante.isEmpty()){ 
+                %>
+                <input type="hidden" name="tipoUsuario" value="estudiante">
+                <%}else if(!docente.isEmpty()){%>
+                <input type="hidden" name="tipoUsuario" value="docente">
+                <%}else if(!administrador.isEmpty()){%>
+                <input type="hidden" name="tipoUsuario" value="administrador">
+                <%}%>
                      <div style="margin:19px;" align="center">
                      	<button class="btn btn-info" style="font-size: 20px;"><span class="glyphicon glyphicon-pencil" name="accion" value="editar"> Editar</span></button>
                         <button class="btn btn-danger" style="font-size: 20px;"><span class="glyphicon glyphicon-remove">Cancelar</span></button>
