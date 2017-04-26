@@ -15,7 +15,36 @@
 			<legend style="font-style: oblique; font"><h1><span style="color :red;font-size: 60px;">AULA</span> <span style="color:blue ;font-size: 60px;">VIRTUAL</span></h1></legend>
 			</div>
 		</div>
-        
+        <% HttpSession sesion = request.getSession();  %>
+        <% if(sesion.getAttribute("estudiante") == null && sesion.getAttribute("docente") == null && sesion.getAttribute("administrador") == null){ %>
+		<div class="row" style="margin-top: 10px;">
+			<div class="col-md-6 " align="center">
+				<a href="login.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Iniciar Sesion</button></a>
+			</div>
+			<div class="col-md-6" align="center">
+			<a href="register.jsp"><button class="btn btn-info"><span class=" glyphicon glyphicon-download-alt"></span> Registrarse</button></a>
+			</div>
+		</div>
+            <% }else if(sesion.getAttribute("estudiante") != null){ %>
+            <div class="row" style="margin-top: 10px;">
+			<div class="col-md-6 " align="center">
+				<a href="dashboard_estudiante.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
+			</div>
+		</div>
+            
+            <% }else if(sesion.getAttribute("docente") != null){ %>
+            <div class="row" style="margin-top: 10px;">
+			<div class="col-md-6 " align="center">
+				<a href="dashboard_docente.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
+			</div>
+		</div>
+            <% }else if(sesion.getAttribute("administrador") != null){ %>
+            <div class="row" style="margin-top: 10px;">
+			<div class="col-md-6 " align="center">
+				<a href="dashboard_admin.jsp"><button class="btn btn-success"><span class=" glyphicon glyphicon-user"></span> Dashboard</button></a>
+			</div>
+		</div>
+            <% } %>
 		
 
 <div class="row" style="padding-top: 10px;">
