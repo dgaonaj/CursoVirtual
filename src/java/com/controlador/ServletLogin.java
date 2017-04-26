@@ -5,18 +5,22 @@
  */
 package com.controlador;
 
+import com.modelo.Docente;
 import com.modelo.Estudiante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author damian
  */
+@WebServlet(name = "ServletLogin", urlPatterns = {"/ServletLogin"})
 public class ServletLogin extends HttpServlet {
 
     /**
@@ -34,13 +38,27 @@ public class ServletLogin extends HttpServlet {
         String password = request.getParameter("password");
         String tipoUsuario = request.getParameter("tipoUsuario");
         String accion = request.getParameter("accion");
-
+        
+        HttpSession sesion = request.getSession();
+        String mensaje;
         
         if(accion.equals("ingresar")){
-            if(tipoUsuario.equals("estudiante")){
-                
+            if(tipoUsuario.equals("estudiante")){       
                 Estudiante estu = new Estudiante();
-                estu.login();
+                if(estu.login(username, password)==1){
+                    mensaje="Login Correcto";
+                    sesion.setAttribute("mensaje", mensaje);
+                    request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);                    
+                }else{
+                    mensaje="Login Incorrecto";
+                    sesion.setAttribute("mensaje", mensaje);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);                  
+                }
+            }else{
+                if(tipoUsuario.equals("docente")){
+                    Docente doce = new Docente();
+                    
+                }
             }
         }
     }

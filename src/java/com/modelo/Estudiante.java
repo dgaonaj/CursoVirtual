@@ -27,9 +27,11 @@ public class Estudiante extends Usuario {
         return estudiJDBC.insertEstudiante(getNombres(), getApellidos(), getCorreo(), getTipoIdentifica(), getNumIdentifica(), getTipoUsuario(), getUsername(), getPassword());
     }
     
-    public int login(){
+    public int login(String username, String password){
         
-        return 0;
+        EstudianteJDBC estuJDBC = new EstudianteJDBC();
+        return estuJDBC.select(username, password);
+
     }
     
 }

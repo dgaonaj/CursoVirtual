@@ -55,14 +55,14 @@ public class ServletRegistro extends HttpServlet {
                     int rows = docente.registrarUsuario();
                     if(rows==1){
                         mensaje = "Registro de docente exitoso";
-                        sesion.setAttribute("docente", docente);
+                        sesion.setAttribute("mensaje", docente);
                     }
                 }else if(tipoUsuario.equals("estudiante")){
                     Estudiante estudiante = new Estudiante(nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
                     int rows = estudiante.registrarUsuario();
                     if(rows==1){
                         mensaje = "Registro de estudiante exitoso";
-                        sesion.setAttribute("estudiante", estudiante);
+                        sesion.setAttribute("mensaje", estudiante);
                     }
                 }
                 request.getRequestDispatcher("index.jsp").forward(request, response);

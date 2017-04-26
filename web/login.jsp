@@ -21,7 +21,7 @@
                     <div class="col-md-4">  			
                     </div>
  			<div class="col-md-4 " style="margin-top: 40px; background-color: white;">
- 				<form action="autenticacion.php" method="post">
+ 				<form name="login" action="ServletLogin">
                                     <div align="center">
                                         <span class="glyphicon glyphicon-user" style="color: green; size: 15px;" ></span>
                                     </div>
@@ -32,7 +32,7 @@
                                      </div>
                                      <div class="form-group">                   	                 
                                          <label>Password</label>
-                                         <input type="password" class="form-control"	name=password placeholder="Digite su contraseña">
+                                         <input type="password" class="form-control" name=password placeholder="Digite su contraseña">
                                      </div>
                                      <div class="form-group" align="center">
                                           <label>Tipo de usuario</label>
