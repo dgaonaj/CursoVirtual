@@ -19,7 +19,7 @@
             String estudiante = request.getParameter("estudiante");
             String docente = request.getParameter("docente");
             String administrador = request.getParameter("administrador");
-            if(!estudiante.isEmpty() && !docente.isEmpty() && !administrador.isEmpty()){ 
+            if(estudiante.isEmpty() && docente.isEmpty() && administrador.isEmpty()){ 
         %>
 		<div class="row" style="margin-top: 10px;">
 			<div class="col-md-6 " align="center">
