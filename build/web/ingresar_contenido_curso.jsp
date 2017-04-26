@@ -11,15 +11,20 @@
 <body>
 <div class="container-fluid">
 	<div class="row">
-			<div class="col-md-12" align="center">
+            
+			<div class="col-md-12" align="center">                                 
 			    <legend style="font-size: 25px; ">INGRESAR CONTENIDO AL CURSO</legend>
-				<div class="col-md-6" style="">
+                                    <div align="left">
+                                        <a href="dashboard_admin.jsp"><button class="btn btn-success"><span class="glyphicon glyphicon-share-alt"></span>Dashboard</button></a>
+                                    </div>
+				<div class="col-md-6" style="margin-top: 10px;">
 					 <div class="panel panel-success" align="center">
                                             <div class="panel-heading">Cursos Creados</div>
                                             <div class="panel-body">Panel Content</div>
                                          </div>
 				</div>
 				<div class="col-md-6">
+                                   
 					<div>
 						<img src="img/ingresar.jpg" alt="">
 					</div>
