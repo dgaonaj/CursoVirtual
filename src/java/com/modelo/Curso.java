@@ -5,6 +5,7 @@
  */
 package com.modelo;
 
+import com.BD.CursoJDBC;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -109,5 +110,9 @@ public class Curso {
         this.contenidos = contenidos;
     }
     
-    
+    public int insertarCurso(String nombre, int cantEstudi, String fecha, int duracion){
+        
+        CursoJDBC cursoJDBC = new CursoJDBC();
+        return cursoJDBC.insertCurso(nombre, cantEstudi, fecha, duracion);
+    }
 }

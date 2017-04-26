@@ -5,6 +5,7 @@
  */
 package com.controlador;
 
+import com.modelo.Administrador;
 import com.modelo.Docente;
 import com.modelo.Estudiante;
 import java.io.IOException;
@@ -57,7 +58,28 @@ public class ServletLogin extends HttpServlet {
             }else{
                 if(tipoUsuario.equals("docente")){
                     Docente doce = new Docente();
-                    
+                    if(doce.login(username, password)==1){
+                        mensaje="Login Correcto";
+                        sesion.setAttribute("mensaje", mensaje);
+                        request.getRequestDispatcher("index.jsp").forward(request, response); 
+                    }else{
+                        mensaje="Login Incorrecto";
+                        sesion.setAttribute("mensaje", mensaje);
+                        request.getRequestDispatcher("login.jsp").forward(request, response); 
+                    }
+                }else{
+                    if(tipoUsuario.equals("administrador")){
+                        Administrador admin = new Administrador();
+                        if(admin.login(username, password)==1){
+                            mensaje="Login Correcto";
+                            sesion.setAttribute("mensaje", mensaje);
+                            request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
+                        }else{
+                            mensaje="Login Incorrecto";
+                            sesion.setAttribute("mensaje", mensaje);
+                            request.getRequestDispatcher("login.jsp").forward(request, response);
+                        }
+                    }
                 }
             }
         }

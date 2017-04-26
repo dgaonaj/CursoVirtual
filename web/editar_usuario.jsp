@@ -12,7 +12,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3" style="margin-top: 140px; background-color: white;">
-			<form action="" method="post">
+			<form name ="registro" action="ServletEditarUsuario">
  				<div align="center">
                                       <legend align="center">Editar  Datos</legend>
                                       <span> <img src="img/editar.png" alt="" width="80" height="80"></span>
@@ -26,15 +26,21 @@
                  
                                  </div>
                  <div class="form-inline " align="center" style="margin-top: 19px;">
-                
- 				  <label>Correo:</label>	
- 					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
+                                                                  
+                                <label>Username:</label>
+                                    <input type="text" class="form-control" name="username" placeholder="Digite su usuario">
+                            
                     		  <label>Password:</label>	
  					<input type="Password" class="form-control" name="Password" placeholder="Ingrese su nueva password ">
+                 </div>
+                 <div class="form-inline " align="center" style="margin-top: 19px;">           
+                            <label>Correo:</label>	
+ 					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
                  </div>
                      <div style="margin:19px;" align="center">
                      	<button class="btn btn-info" style="font-size: 20px;"><span class="glyphicon glyphicon-pencil"> Editar</span></button>
                      </div>
+                </form>
 		</div>
 	</div>
 </div>

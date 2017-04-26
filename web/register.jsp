@@ -60,7 +60,7 @@
                         </div>
                         <div class="form-group">                                     
                             <label>Username:</label>
-                            <input type="text" class="form-control" name="username" placeholder="Digite su contraseÃ±a">
+                            <input type="text" class="form-control" name="username" placeholder="Digite su usuario">
                         </div>
                         <div class="form-group">                                     
                             <label>Password:</label>

@@ -19,7 +19,7 @@
 						<img src="img/cursos.jpg" alt="">
 					</div>
 			<div>
-				<form action="">
+				<form name="CrearCurso" action="ServletCrearCurso">
 			            <div class="form-group">
 					        <label>Nombre del Curso:</label>
 						<input type="text" class="form-control" name="nombrecurso" placeholder="Ingresa el nombre del curso">
@@ -30,13 +30,13 @@
 				    </div>
 				    <div class="form-group">
 						<label>Duracion:</label>
-						<input type="text" class="form-control" name="Duracion" placeholder="Ingresa la Duracion curso">
+						<input type="text" class="form-control" name="duracion" placeholder="Ingresa la Duracion curso">
 				    </div>
 				    <div class="form-group">
-					        <label>Cantidad Maxima:</label>
+					        <label>Cantidad Maxima de Estudiantes:</label>
 						<input type="text" class="form-control" name="cantmaxima" placeholder="Ingresa la cantidd maxima de estudiantes">
 						<div style="margin-top: 20px;">
-						   <button class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Crear Curso</button>
+						   <button class="btn btn-success" class="glyphicon glyphicon-ok" name="accion" value="crear"> Crear Curso</button>
 						</div>
 				    </div>
 				</form>

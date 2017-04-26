@@ -35,11 +35,17 @@ public class Docente extends Usuario {
         this.especialidad = especialidad;
     }
 
-    @Override
     public int registrarUsuario(){
         
         DocenteJDBC docentJDBC = new DocenteJDBC();      
         return docentJDBC.insertDocente(especialidad, getNombres(), getApellidos(), getCorreo(), getTipoIdentifica(), getNumIdentifica(), getTipoUsuario(), getUsername(), getPassword());
+    }
+    
+    @Override
+    public int login(String username, String password){
+        
+        DocenteJDBC doceJDBC = new DocenteJDBC();
+        return doceJDBC.select(username, password);
     }
 
 }

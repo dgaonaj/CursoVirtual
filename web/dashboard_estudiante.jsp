@@ -35,7 +35,7 @@
                                  <span class="glyphicon glyphicon-pencil" style="font-size: 25px;"></span>
                              <div>
                                  <caption>
-                                     <button class="btn btn-primary">Editar Informacion</button>
+                                     <a href="editar_usuario.jsp"><button class="btn btn-primary">Editar Informacion</button></a>
                                  </caption>
                              </div>
                         </div>
@@ -43,7 +43,7 @@
                      <span class="glyphicon glyphicon-share-alt" style="font-size: 25px;"></span>
                          <div>
                              <caption>
-                                 <button class="btn btn-success">Inscribir Curso</button>
+                                 <a href="inscribirse_al_curso.jsp"><button class="btn btn-success">Inscribir Curso</button></a>
                              </caption>
                          </div>
                  </div>

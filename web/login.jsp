@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Login</title>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 	           <!-- Latest compiled and minified CSS -->
@@ -27,19 +27,19 @@
                                     </div>
                                     <legend align="center">Inicio De Sesion</legend>
                                     <div class="form-group">
-                                        <label>username:</label>	
+                                        <label>Usuario:</label>	
  					<input type="text" class="form-control" name="username" placeholder="Ingrese su nombre de usuario">
                                      </div>
                                      <div class="form-group">                   	                 
-                                         <label>Password</label>
+                                         <label>Contraseña</label>
                                          <input type="password" class="form-control" name=password placeholder="Digite su contraseÃ±a">
                                      </div>
                                      <div class="form-group" align="center">
                                           <label>Tipo de usuario</label>
                                                 <div class="radio">
-                                                               <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
-                                                               <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
-                                                               <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsario"> Administrador </label>
+                                                    <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
+                                                    <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
+                                                    <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsuario"> Administrador </label>
                                                  </div>
 
                                     </div>

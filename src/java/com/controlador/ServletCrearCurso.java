@@ -5,17 +5,22 @@
  */
 package com.controlador;
 
+import com.modelo.Curso;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author damian
  */
+@WebServlet(name = "ServletCrearCurso", urlPatterns = {"/ServletCrearCurso"})
 public class ServletCrearCurso extends HttpServlet {
 
     /**
@@ -29,16 +34,26 @@ public class ServletCrearCurso extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nombre = request.getParameter("nombre");
-        int canEstudiantes = Integer.parseInt(request.getParameter("canEstudiantes"));
+        String nombre = request.getParameter("nombrecurso");
+        int canEstudiantes = Integer.parseInt(request.getParameter("cantmaxima"));
         int duracion = Integer.parseInt(request.getParameter("duracion"));
-        String fechaInicio = request.getParameter("fechaInicio");
-        String evaluacion = request.getParameter("evaluacion");
-        String idDocente = request.getParameter("idDocente");
+        String fechaInicio = request.getParameter("fechini");
         String accion = request.getParameter("accion");
+        
+        HttpSession sesion = request.getSession();
+        String mensaje;
+        
         if(accion.equals("crear")){
-            //Curso curso = new Curso(nombre, canEstudiantes, duracion, fechaInicio, evaluacion, idDocente);
-            //aqui se crea el curso
+            Curso curso = new Curso();
+            if(curso.insertarCurso(nombre, canEstudiantes, fechaInicio, duracion) == 1){
+                mensaje = "Creación del Curso Completada";
+                sesion.setAttribute("mensaje", mensaje);
+                request.getRequestDispatcher("index.jsp").forward(request, response);  
+            }else{
+                mensaje = "Error en Creación del Curso";
+                sesion.setAttribute("mensaje", mensaje);
+                request.getRequestDispatcher("crear_cursos.jsp").forward(request, response);
+            }
         }
     }
 

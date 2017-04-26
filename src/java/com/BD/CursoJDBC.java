@@ -10,36 +10,30 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Date;
 
 /**
  *
  * @author Amelia
  */
-public class DocenteJDBC {
+public class CursoJDBC {
     private final String SQL_INSERT =
-            "INSERT INTO docente(pkeyDocente, tipoIdentifica, nombres, apellidos,"
-            + "correo, tipoUsuario, username, password, especialidad) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            "INSERT INTO curso(nombre, duracion, fechaInicio, cantidadEstudiantes) "
+            + "VALUES (?, ?, ?, ?)";
     
-    public int insertDocente(String especialidad, String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password){
+    public int insertCurso(String nombre, int cantEstudi, String fecha, int duracion){
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         int rows = 0;
-        
         try{
             conn = Conexion.getConnection();
             stmt = conn.prepareStatement(SQL_INSERT);
             int index = 1;
-            stmt.setInt(index++, numIdentifica);
-            stmt.setString(index++, tipoIdentifica);
-            stmt.setString(index++, nombres);
-            stmt.setString(index++, apellidos);
-            stmt.setString(index++, correo);
-            stmt.setString(index++, tipoUsuario);
-            stmt.setString(index++, username);
-            stmt.setString(index++, password);
-            stmt.setString(index++, especialidad);
+            stmt.setString(index++, nombre);
+            stmt.setInt(index++, cantEstudi);
+            stmt.setString(index++, fecha);
+            stmt.setInt(index++, duracion);
             System.out.println("Ejecutando query "+SQL_INSERT);
             rows = stmt.executeUpdate();
             System.out.println("Registros Afectados "+rows);
@@ -53,14 +47,14 @@ public class DocenteJDBC {
         return rows;
     }
     
-     public int select(String username, String password){
+    public int select(String username, String password){
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         int rows = 0;
         try{
             conn = Conexion.getConnection();
-            stmt = conn.prepareStatement("SELECT COUNT(*) FROM docente WHERE username = '"+username+"' AND password = '"+password+"'");
+            stmt = conn.prepareStatement("SELECT COUNT(*) FROM estudiante WHERE username = '"+username+"' AND password = '"+password+"'");
             int index = 1;
             rs = stmt.executeQuery();
             rs.next();
@@ -75,6 +69,4 @@ public class DocenteJDBC {
         }
         return rows;
     }
-    
-    
 }

@@ -8,6 +8,7 @@ package com.controlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author damian
  */
+@WebServlet(name = "ServletEditarUsuario", urlPatterns = {"/ServletEditarUsuario"})
 public class ServletEditarUsuario extends HttpServlet {
 
     /**
@@ -29,6 +31,7 @@ public class ServletEditarUsuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         
     }
 

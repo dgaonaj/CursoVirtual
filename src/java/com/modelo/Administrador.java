@@ -5,6 +5,8 @@
  */
 package com.modelo;
 
+import com.BD.AdministradorJDBC;
+
 /**
  *
  * @author Amelia
@@ -18,9 +20,14 @@ public class Administrador extends Usuario{
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
     }
     
-    @Override
     public int registrarUsuario() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int login(String username, String password) {
+        AdministradorJDBC adminJDBC = new AdministradorJDBC();
+        return adminJDBC.select(username, password);
     }
     
 }

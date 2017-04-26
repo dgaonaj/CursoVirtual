@@ -98,6 +98,6 @@ public abstract class Usuario {
         this.password = password;
     }
     
-    public abstract int registrarUsuario();
+    public abstract int login(String username, String password);
     
 }

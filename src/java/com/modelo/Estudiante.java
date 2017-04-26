@@ -19,14 +19,14 @@ public class Estudiante extends Usuario {
     public Estudiante(String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password) {
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
     }
-    
-    @Override
+
     public int registrarUsuario() {
         
         EstudianteJDBC estudiJDBC = new EstudianteJDBC();
         return estudiJDBC.insertEstudiante(getNombres(), getApellidos(), getCorreo(), getTipoIdentifica(), getNumIdentifica(), getTipoUsuario(), getUsername(), getPassword());
     }
     
+    @Override
     public int login(String username, String password){
         
         EstudianteJDBC estuJDBC = new EstudianteJDBC();
