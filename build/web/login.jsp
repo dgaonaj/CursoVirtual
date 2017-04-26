@@ -18,37 +18,34 @@
  		</div>
  		
  		<div class="row">
- 		<div class="col-md-4">
- 			
- 		</div>
- 			<div class="col-md-4 " style="margin-top: 40px; background-color: white; ;"
+                    <div class="col-md-4">  			
+                    </div>
+ 			<div class="col-md-4 " style="margin-top: 40px; background-color: white;">
  				<form action="autenticacion.php" method="post">
- 				<div align="center">
- 				<span class="glyphicon glyphicon-user" style="color: green; size: 15px;" ></span>
- 				</div>
- 				<legend align="center">Inicio De Sesion</legend>
- 				  <div class="form-group">
- 				    <label>username:</label>	
+                                    <div align="center">
+                                        <span class="glyphicon glyphicon-user" style="color: green; size: 15px;" ></span>
+                                    </div>
+                                    <legend align="center">Inicio De Sesion</legend>
+                                    <div class="form-group">
+                                        <label>username:</label>	
  					<input type="text" class="form-control" name="username" placeholder="Ingrese su nombre de usuario">
-                  </div>
-                  <div class="form-group">                   	                 
- 					<label>Password</label>
- 					<input type="password" class="form-control"	name=password placeholder="Digite su contraseña">
-                 </div>
-                 <div class="form-group" align="center">
-                 	<label>Tipo de usuario</label>
-                      <div class="radio">
-		                     <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
+                                     </div>
+                                     <div class="form-group">                   	                 
+                                         <label>Password</label>
+                                         <input type="password" class="form-control"	name=password placeholder="Digite su contraseña">
+                                     </div>
+                                     <div class="form-group" align="center">
+                                          <label>Tipo de usuario</label>
+                                                <div class="radio">
+                                                               <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario">Estudiante </label>
+                                                               <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
+                                                               <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsario"> Administrador </label>
+                                                 </div>
 
-		                     <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario"> Docente </label>
-		                     <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsario"> Administrador </label>
-
-                       </div>
-
-                 </div>
-                 <div class="form-group" align="center">
-                 	<button class="btn btn-success" onclick="submit();" name="accion" value="ingresar">Ingresar</button>
-                 </div>
+                                    </div>
+                                           <div class="form-group" align="center">
+                                                  <button class="btn btn-success" onclick="submit();" name="accion" value="ingresar">Ingresar</button>
+                                           </div>
  				</form>
  			</div>
  		</div>
