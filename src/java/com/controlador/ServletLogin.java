@@ -50,6 +50,7 @@ public class ServletLogin extends HttpServlet {
                 if(pkeyUsuario != 0){
                     mensaje="Login Correcto";
                     sesion.setAttribute("mensaje", mensaje);
+                    sesion.setAttribute("estudiante", pkeyUsuario);
                     request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);                    
                 }else{
                     mensaje="Login Incorrecto";
@@ -63,6 +64,7 @@ public class ServletLogin extends HttpServlet {
                     if(pkeyUsuario!=0){
                         mensaje="Login Correcto";
                         sesion.setAttribute("mensaje", mensaje);
+                        sesion.setAttribute("docente", pkeyUsuario);
                         request.getRequestDispatcher("index.jsp").forward(request, response); 
                     }else{
                         mensaje="Login Incorrecto";
@@ -76,6 +78,7 @@ public class ServletLogin extends HttpServlet {
                         if(pkeyUsuario!=0){
                             mensaje="Login Correcto";
                             sesion.setAttribute("mensaje", mensaje);
+                            sesion.setAttribute("administrador", pkeyUsuario);
                             request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
                         }else{
                             mensaje="Login Incorrecto";
