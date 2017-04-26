@@ -16,7 +16,7 @@
 			</div>
 		</div>
         <%
-            String estudiante = request.getParameter("estuadiante");
+            String estudiante = request.getParameter("estudiante");
             String docente = request.getParameter("docente");
             String administrador = request.getParameter("administrador");
             if(!estudiante.isEmpty() && !docente.isEmpty() && !administrador.isEmpty()){ 
