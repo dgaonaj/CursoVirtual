@@ -31,14 +31,14 @@
                                     <input type="text" class="form-control" name="username" placeholder="Digite su usuario">
                             
                     		  <label>Password:</label>	
- 					<input type="Password" class="form-control" name="Password" placeholder="Ingrese su nueva password ">
+ 					<input type="Password" class="form-control" name="password" placeholder="Ingrese su nueva password ">
                  </div>
                  <div class="form-inline " align="center" style="margin-top: 19px;">           
                             <label>Correo:</label>	
  					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
                  </div>
                      <div style="margin:19px;" align="center">
-                     	<button class="btn btn-info" style="font-size: 20px;"><span class="glyphicon glyphicon-pencil"> Editar</span></button>
+                     	<button class="btn btn-info" style="font-size: 20px;" name="accion" value="editar"><span class="glyphicon glyphicon-pencil"> Editar</span></button>
                      </div>
                 </form>
 		</div>

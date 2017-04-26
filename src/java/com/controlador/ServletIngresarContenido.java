@@ -29,9 +29,10 @@ public class ServletIngresarContenido extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String idCurso = request.getParameter("idCurso");
         String nombre = request.getParameter("nombre");
+        String tema = request.getParameter("tema");
         String descripcion = request.getParameter("descripcion");
-        String actividad = request.getParameter("actividad");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

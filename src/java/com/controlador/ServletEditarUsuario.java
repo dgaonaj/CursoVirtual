@@ -31,7 +31,17 @@ public class ServletEditarUsuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        String nombres = request.getParameter("nombres");
+        String apellidos = request.getParameter("apellidos");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String correo = request.getParameter("correo");
+        String accion = request.getParameter("accion");
+        if(accion.equals("editar")){
+            
+            request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);
+        }
+                
         
     }
 
