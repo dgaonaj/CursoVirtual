@@ -1,6 +1,6 @@
 <% 
-String administrador = "";
-if(!administrador.isEmpty()){
+HttpSession sesion = request.getSession();
+if(sesion.getAttribute("administrador") != null){
 %>
 <!DOCTYPE html>
 <html lang="en">
