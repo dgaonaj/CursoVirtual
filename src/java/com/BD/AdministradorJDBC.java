@@ -24,7 +24,7 @@ public class AdministradorJDBC {
         int rows = 0;
         try{
             conn = Conexion.getConnection();
-            stmt = conn.prepareStatement("SELECT COUNT(*) FROM administrador WHERE username = '"+username+"' AND password = '"+password+"'");
+            stmt = conn.prepareStatement("SELECT PKEYADMIN FROM administrador WHERE username = '"+username+"' AND password = '"+password+"'");
             int index = 1;
             rs = stmt.executeQuery();
             rs.next();

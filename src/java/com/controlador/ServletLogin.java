@@ -39,14 +39,15 @@ public class ServletLogin extends HttpServlet {
         String password = request.getParameter("password");
         String tipoUsuario = request.getParameter("tipoUsuario");
         String accion = request.getParameter("accion");
-        
+        int pkeyUsuario;
         HttpSession sesion = request.getSession();
         String mensaje;
         
         if(accion.equals("ingresar")){
             if(tipoUsuario.equals("estudiante")){       
                 Estudiante estu = new Estudiante();
-                if(estu.login(username, password)==1){
+                pkeyUsuario=estu.login(username, password);
+                if(pkeyUsuario != 0){
                     mensaje="Login Correcto";
                     sesion.setAttribute("mensaje", mensaje);
                     request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);                    
@@ -58,7 +59,8 @@ public class ServletLogin extends HttpServlet {
             }else{
                 if(tipoUsuario.equals("docente")){
                     Docente doce = new Docente();
-                    if(doce.login(username, password)==1){
+                    pkeyUsuario=doce.login(username, password);
+                    if(pkeyUsuario!=0){
                         mensaje="Login Correcto";
                         sesion.setAttribute("mensaje", mensaje);
                         request.getRequestDispatcher("index.jsp").forward(request, response); 
@@ -70,7 +72,8 @@ public class ServletLogin extends HttpServlet {
                 }else{
                     if(tipoUsuario.equals("administrador")){
                         Administrador admin = new Administrador();
-                        if(admin.login(username, password)==1){
+                        pkeyUsuario=admin.login(username, password);
+                        if(pkeyUsuario!=0){
                             mensaje="Login Correcto";
                             sesion.setAttribute("mensaje", mensaje);
                             request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
