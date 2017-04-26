@@ -48,7 +48,7 @@
                                                         </div>
                                                         <div style="margin-top: 20px;">
                                                           <button class="btn btn-info"><span class="glyphicon glyphicon-ok"></span> Ingresar Contenido</button>
-                                                          <button class="btn btn-danger"><span class="glyphicon glyphicon-rewmove"></span>Cancelar</button>
+                                                          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
                                                         </div>
                                                 </form>
 					</div>
