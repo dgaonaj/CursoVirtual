@@ -30,6 +30,10 @@ public class ServletInscribirEstudiante extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String idCurso = request.getParameter("idCurso");
+        String accion = request.getParameter("accion");
+        if(accion.equals("inscribir")){
+            
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

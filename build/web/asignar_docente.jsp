@@ -29,14 +29,11 @@
 						<img src="img/docente1.png" alt="">
 					</div>
 					<div>
-                                        	<form action="">
+                                        	<form action="ServletAsignarDocente">
                                                     <div class="form-group">
-                                                       <label for="sel2">Selecciona el curso:</label>
-                                                             <select class="form-control" id="sel2" name="idCurso">
-                                                                        <option value="">.....</option>
-                                                                        <option value="">......</option>
-                                                             </select>       
-                                                    </div>
+                                                                <label>id curso</label>
+                                                                <input type="text" class="form-control" name="idCurso" placeholder="Ingresa el id del curso">
+                                                        </div>
                                                       
                                                         
                                                         <div class="form-group">
@@ -45,8 +42,8 @@
                                                         </div>
                                                         
                                                         <div style="margin-top: 20px;">
-                                                          <button class="btn btn-info"><span class="glyphicon glyphicon-ok"></span> Asignar Docente</button>
-                                                          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                                                          <button class="btn btn-info"><span class="glyphicon glyphicon-ok" name="accion" value="asignar"></span> Asignar Docente</button>
+                                                          <a href="asignar_docente.jsp"><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button></a>
 
                                                         </div>
                                                 </form>

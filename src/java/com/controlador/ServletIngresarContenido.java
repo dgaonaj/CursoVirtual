@@ -33,6 +33,7 @@ public class ServletIngresarContenido extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String tema = request.getParameter("tema");
         String descripcion = request.getParameter("descripcion");
+        String accion = request.getParameter("accion");
         
     }
 

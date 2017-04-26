@@ -31,6 +31,11 @@ public class ServletAsignarDocente extends HttpServlet {
             throws ServletException, IOException {
         String idCurso = request.getParameter("idCurso");
         String idDocente = request.getParameter("idDocente");
+        String accion = request.getParameter("accion");
+        
+        if(accion.equals("asignar")){
+            
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

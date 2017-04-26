@@ -29,31 +29,26 @@
 						<img src="img/ingresar.jpg" alt="">
 					</div>
 					<div>
-                                        	<form action="">
-                                                       <label for="sel2">Selecciona el curso al cual ingresar contenidos:</label>
-                                                             <select class="form-control" id="sel2" name="idCurso">
-                                                                        <option value="">.....</option>
-                                                                        <option value="">......</option>
-                                                             </select>       
+                                        	<form action="ServletIngresarContenidoCurso">     
                                                         <div class="form-group">
-                                                                <label>Ingresa el ID del Contenido:</label>
-                                                                <input type="text" class="form-control" name="idContenido" placeholder="Ingresa el id del Contenido a crear">
+                                                                <label>Ingresa el ID del curso</label>
+                                                                <input type="text" class="form-control" name="idCurso" placeholder="Ingresa el id del curso">
                                                         </div>
                                                         <div class="form-group">
                                                                 <label>Nombre del Unidad:</label>
-                                                                <input type="text" class="form-control" name="nombreUnidad" placeholder="Ingresa el nombre de la unidad">
+                                                                <input type="text" class="form-control" name="nombre" placeholder="Ingresa el nombre de la unidad">
                                                         </div>
                                                         <div class="form-group">
                                                                 <label>Nombre del Tema:</label>
-                                                                <input type="text" class="form-control" name="nombreTema" placeholder="Ingresa el nombre del tema">
+                                                                <input type="text" class="form-control" name="tema" placeholder="Ingresa el nombre del tema">
                                                         </div>
                                                         <div class="form-group">
                                                                 <label>Descripcion:</label>
-                                                                <textarea name="Descripcion" id="" class="form-control" cols="30" rows="10"></textarea>
+                                                                <textarea name="descripcion" id="" class="form-control" cols="30" rows="10"></textarea>
                                                         </div>
                                                         <div style="margin-top: 20px;">
-                                                          <button class="btn btn-info"><span class="glyphicon glyphicon-ok"></span> Ingresar Contenido</button>
-                                                          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                                                          <button class="btn btn-info"><span class="glyphicon glyphicon-ok" name="accion" value="ingresar"></span> Ingresar Contenido</button>
+                                                          <a href="ingresar_contenido_curso.jsp"><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button></a>
                                                         </div>
                                                 </form>
 					</div>

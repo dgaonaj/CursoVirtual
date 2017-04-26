@@ -24,15 +24,15 @@
 						<img src="img/docente.jpg" alt="">
 					</div>
 					<div>
-                                            <form action="">
-                                                <label for="sel3">Ingresa el ID del Curso:</label>
-                                                <select class="form-control" id="sel2" name="idCurso">
-                                                                        <option value="">.....</option>
-                                                                        <option value="">......</option>
-                                                </select>       
+                                            <form action="ServletInscribirEstudiante">
+                                                <div class="form-group">
+                                                                <label>Ingresa el ID del curso</label>
+                                                                <input type="text" class="form-control" name="idCurso" placeholder="Ingresa el id del curso">
+                                                        </div>    
                                                    
                                                     <div style="margin-top: 20px;">
-                                                         <button class="btn btn-danger"><span class="glyphicon glyphicon-ok"></span> Inscribir al Curso</button>
+                                                         <button class="btn btn-danger"><span class="glyphicon glyphicon-ok" name="accion" value="inscribir"></span> Inscribir al Curso</button>
+                                                    <a href="inscribirse_al_curso.jsp"><button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</button></a>
                                                     </div>
                                             </form>
 					</div>
