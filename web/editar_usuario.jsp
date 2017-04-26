@@ -1,6 +1,6 @@
 <% 
 HttpSession sesion = request.getSession();
-if(sesion.getAttribute("estudiante") != null){
+if(sesion.getAttribute("estudiante") != null || sesion.getAttribute("docente") != null || sesion.getAttribute("administrador") != null){
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,16 +41,11 @@ if(sesion.getAttribute("estudiante") != null){
                             <label>Correo:</label>	
  					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
                  </div>
-                <%
-                    String estudiante = request.getParameter("estudiante");
-                    String docente = request.getParameter("docente");
-                    String administrador = request.getParameter("administrador");
-                    if(!estudiante.isEmpty()){ 
-                %>
+                <% if(sesion.getAttribute("estudiante") != null){  %>
                 <input type="hidden" name="tipoUsuario" value="estudiante">
-                <%}else if(!docente.isEmpty()){%>
+                <%}else if(sesion.getAttribute("docente") != null){%>
                 <input type="hidden" name="tipoUsuario" value="docente">
-                <%}else if(!administrador.isEmpty()){%>
+                <%}else if(sesion.getAttribute("administrador") != null){%>
                 <input type="hidden" name="tipoUsuario" value="administrador">
                 <%}%>
                      <div style="margin:19px;" align="center">
