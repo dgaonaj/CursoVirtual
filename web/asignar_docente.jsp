@@ -31,7 +31,7 @@
 					<div>
                                         	<form action="">
                                                     <div class="form-group">
-                                                       <label for="sel2">Selecciona el curso al cual ingresar contenidos:</label>
+                                                       <label for="sel2">Selecciona el curso:</label>
                                                              <select class="form-control" id="sel2" name="idCurso">
                                                                         <option value="">.....</option>
                                                                         <option value="">......</option>
@@ -40,8 +40,8 @@
                                                       
                                                         
                                                         <div class="form-group">
-                                                                <label>Numero identificacion profesor:</label>
-                                                                <input type="text" class="form-control" name="numIdentifica" placeholder="Ingresa el numero de identificacion asociado al profesor">
+                                                                <label>id docente:</label>
+                                                                <input type="text" class="form-control" name="idDocente" placeholder="Ingresa el id del docente">
                                                         </div>
                                                         
                                                         <div style="margin-top: 20px;">

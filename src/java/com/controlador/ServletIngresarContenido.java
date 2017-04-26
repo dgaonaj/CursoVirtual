@@ -33,6 +33,7 @@ public class ServletIngresarContenido extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String tema = request.getParameter("tema");
         String descripcion = request.getParameter("descripcion");
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
