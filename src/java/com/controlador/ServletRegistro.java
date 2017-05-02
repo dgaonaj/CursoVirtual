@@ -64,7 +64,7 @@ public class ServletRegistro extends HttpServlet {
                         mensaje = "Error, Registro Docente";
                     }
                 }else if(tipoUsuario.equals("estudiante")){
-                    Estudiante estudiante = new Estudiante(nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password);
+                    Estudiante estudiante = new Estudiante(nombres, apelildos, correo, tipoIdentifiacion, numIdentificacion, tipoUsuario, username, password, false);
                     EstudianteJDBC estuJDBC = new EstudianteJDBC();
                     int rows = estuJDBC.verificarUsuario(estudiante);
                     if(rows==1){

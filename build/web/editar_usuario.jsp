@@ -37,9 +37,9 @@ if(sesion.getAttribute("pkeyEstudiante") != null || sesion.getAttribute("pkeyDoc
                     		  <label>Password:</label>	
  					<input type="Password" class="form-control" name="password" placeholder="Ingrese su nueva password " value="${password}"
                  </div>
-                 <div class="form-inline " align="center" style="margin-top: 19px;">           
+                 <div class="form-inline " align="left" style="margin-top: 19px;">           
                             <label>Correo:</label>	
- 					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo " value="${correo}">
+ 					<input type="email" class="form-control" name="correo" placeholder="Ingrese su correo " value="${correo}">
                  </div>
                 <% if(sesion.getAttribute("estudiante") != null){  %>
                 <input type="hidden" name="tipoUsuario" value="estudiante">

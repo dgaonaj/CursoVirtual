@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-group">                                     
                             <label>Numero Identificacion:</label>
-                            <input type="text" class="form-control" name="numidentifica" placeholder="Digite su Numero de Identificacion">
+                            <input type="number" class="form-control" name="numidentifica" placeholder="Digite su Numero de Identificacion">
                         </div>
                         <div class="form-group">                                     
                             <label>Correo</label>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">                                     
                             <label>Password:</label>
-                            <input type="text" class="form-control" name="password" placeholder="Digite su contraseÃ±a">
+                            <input type="text" class="form-control" name="password" placeholder="Digite su contraseña">
                         </div>
                   
                         <div class="form-group" align="center" >

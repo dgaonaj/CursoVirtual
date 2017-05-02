@@ -21,8 +21,8 @@ import java.util.List;
 public class EstudianteJDBC {
     private final String SQL_INSERT =
             "INSERT INTO estudiante(pkeyEstudiante, tipoIdentifica, nombres, apellidos,"
-            + "correo, tipoUsuario, username, password) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            + "correo, tipoUsuario, username, password, estado) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
     private final String SQL_INSERT_USU =
             "INSERT INTO usuario(username, password, fkeyEstudiante)"
@@ -81,6 +81,7 @@ public class EstudianteJDBC {
             stmt.setString(index++, estu.getTipoUsuario());
             stmt.setString(index++, estu.getUsername());
             stmt.setString(index++, estu.getPassword());
+            stmt.setBoolean(index++, estu.isEstado());
             System.out.println("Ejecutando query "+SQL_INSERT);
             rows = stmt.executeUpdate();
             System.out.println("Registros Afectados "+rows);

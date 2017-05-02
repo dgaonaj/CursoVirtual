@@ -12,16 +12,27 @@ import com.BD.EstudianteJDBC;
  * @author Amelia
  */
 public class Estudiante extends Usuario {
-
+    
+    private boolean estado;
+    
     public Estudiante() {
     }
-    
-    public Estudiante(String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password) {
+
+    public Estudiante(String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password, boolean estado) {
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
+        this.estado = estado;
     }
     
     public Estudiante(String username, String password){
         super(username, password);
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     @Override
