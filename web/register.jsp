@@ -61,7 +61,7 @@
                         </div>
                         <div class="form-group">                                     
                             <label>Correo</label>
-                            <input type="text" class="form-control" name="correo" placeholder="Digite su Correo Electronico">
+                            <input type="email" class="form-control" name="correo" placeholder="Digite su Correo Electronico">
                         </div>
                         <div class="form-group">                                     
                             <label>Username:</label>
