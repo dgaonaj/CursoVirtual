@@ -77,6 +77,7 @@
                             <div class="radio">
                                 <label class="radio-inline"><input type="radio" value="estudiante" name="tipoUsuario" onclick="desactivado();">Estudiante </label> 
                                 <label class="radio-inline"><input type="radio" value="docente" name="tipoUsuario" onclick="activado();"> Docente </label>
+                                <label class="radio-inline"><input type="radio" value="administrador" name="tipoUsuario" onclick="desactivado();"> Administrador </label>
                             </div>
 
                         </div>

@@ -5,6 +5,10 @@
  */
 package com.controlador;
 
+import com.BD.AdministradorJDBC;
+import com.BD.DocenteJDBC;
+import com.BD.EstudianteJDBC;
+import com.BD.UsuarioJDBC;
 import com.modelo.Administrador;
 import com.modelo.Docente;
 import com.modelo.Estudiante;
@@ -39,48 +43,68 @@ public class ServletLogin extends HttpServlet {
         String password = request.getParameter("password");
         String tipoUsuario = request.getParameter("tipoUsuario");
         String accion = request.getParameter("accion");
-        int pkeyUsuario;
+        
         HttpSession sesion = request.getSession();
         String mensaje;
+        String usuario;
         
         if(accion.equals("ingresar")){
-            if(tipoUsuario.equals("estudiante")){       
-                Estudiante estu = new Estudiante();
-                pkeyUsuario=estu.login(username, password);
-                if(pkeyUsuario != 0){
+            
+            UsuarioJDBC usuaJDBC = new UsuarioJDBC();
+            usuario = usuaJDBC.select(username, password);
+            
+            if(usuario.equals("Estudiante")){
+                Estudiante estu = new Estudiante(username, password);
+                EstudianteJDBC estuJDBC = new EstudianteJDBC();
+                estu = estuJDBC.select(estu);
+                if(estu!=null){
                     mensaje="Login Correcto";
                     sesion.setAttribute("mensaje", mensaje);
-                    sesion.setAttribute("estudiante", pkeyUsuario);
+                    sesion.setAttribute("pkeyEstudiante", estu.getNumIdentifica());
+                    sesion.setAttribute("nombres", estu.getNombres());
+                    sesion.setAttribute("apellidos", estu.getApellidos());
+                    sesion.setAttribute("username", estu.getUsername());
+                    sesion.setAttribute("password", estu.getPassword());
+                    sesion.setAttribute("correo", estu.getCorreo());
+                    sesion.setAttribute("tipoUsuario", estu.getTipoUsuario());
                     request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);                    
                 }else{
                     mensaje="Login Incorrecto";
-                    sesion.setAttribute("estudiante", "");
+                    sesion.setAttribute("pkeyEstudiante", "");
                     sesion.setAttribute("mensaje", mensaje);
                     request.getRequestDispatcher("login.jsp").forward(request, response);                  
                 }
             }else{
-                if(tipoUsuario.equals("docente")){
-                    Docente doce = new Docente();
-                    pkeyUsuario=doce.login(username, password);
-                    if(pkeyUsuario!=0){
+                if(usuario.equals("Docente")){
+                    Docente doce = new Docente(username, password);
+                    DocenteJDBC doceJDBC = new DocenteJDBC();
+                    doce=doceJDBC.select(doce);
+                    if(doce!=null){
                         mensaje="Login Correcto";
                         sesion.setAttribute("mensaje", mensaje);
-                        sesion.setAttribute("docente", pkeyUsuario);
-                        request.getRequestDispatcher("index.jsp").forward(request, response); 
+                        sesion.setAttribute("pkeyDocente", doce.getNumIdentifica());
+                        sesion.setAttribute("nombres", doce.getNombres());
+                        sesion.setAttribute("apellidos", doce.getApellidos());
+                        sesion.setAttribute("username", doce.getUsername());
+                        sesion.setAttribute("password", doce.getPassword());
+                        sesion.setAttribute("correo", doce.getCorreo());
+                        sesion.setAttribute("tipoUsuario", doce.getTipoUsuario());
+                        request.getRequestDispatcher("editar_usuario.jsp").forward(request, response); 
                     }else{
                         mensaje="Login Incorrecto";
-                        sesion.setAttribute("docente", "");
+                        sesion.setAttribute("pkeyDocente", "");
                         sesion.setAttribute("mensaje", mensaje);
                         request.getRequestDispatcher("login.jsp").forward(request, response); 
                     }
                 }else{
-                    if(tipoUsuario.equals("administrador")){
-                        Administrador admin = new Administrador();
-                        pkeyUsuario=admin.login(username, password);
-                        if(pkeyUsuario!=0){
+                    if(usuario.equals("Administrador")){
+                        Administrador admin = new Administrador(username, password);
+                        AdministradorJDBC adminJDBC = new AdministradorJDBC();
+                        admin=adminJDBC.select(admin);
+                        if(admin != null){
                             mensaje="Login Correcto";
                             sesion.setAttribute("mensaje", mensaje);
-                            sesion.setAttribute("administrador", pkeyUsuario);
+                            sesion.setAttribute("pkeyAdmin", admin.getNumIdentifica());
                             request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
                         }else{
                             mensaje="Login Incorrecto";
@@ -88,9 +112,9 @@ public class ServletLogin extends HttpServlet {
                             sesion.setAttribute("mensaje", mensaje);
                             request.getRequestDispatcher("login.jsp").forward(request, response);
                         }
-                    }
-                }
-            }
+                    } 
+                } 
+            }        
         }
     }
 

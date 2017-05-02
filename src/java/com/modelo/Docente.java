@@ -6,6 +6,7 @@
 package com.modelo;
 
 import com.BD.DocenteJDBC;
+import com.BD.EstudianteJDBC;
 
 /**
  *
@@ -26,6 +27,10 @@ public class Docente extends Usuario {
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
         this.especialidad = especialidad;
     }
+
+    public Docente(String username, String password) {
+        super(username, password);
+    }
     
     public String getEspecialidad() {
         return especialidad;
@@ -34,18 +39,16 @@ public class Docente extends Usuario {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-
-    public int registrarUsuario(){
-        
-        DocenteJDBC docentJDBC = new DocenteJDBC();      
-        return docentJDBC.insertDocente(especialidad, getNombres(), getApellidos(), getCorreo(), getTipoIdentifica(), getNumIdentifica(), getTipoUsuario(), getUsername(), getPassword());
-    }
     
     @Override
-    public int login(String username, String password){
+    public int registrarUsuario(){
+        
+        return 0;
+    }
+    
+    public int editarUsuario(int pkeyDocente, String nombres, String apellidos, String username, String password, String correo){
         
         DocenteJDBC doceJDBC = new DocenteJDBC();
-        return doceJDBC.select(username, password);
+        return doceJDBC.update(pkeyDocente, nombres, apellidos, username, password, correo);
     }
-
 }

@@ -1,7 +1,7 @@
 
 <% 
 HttpSession sesion = request.getSession();
-if(sesion.getAttribute("estudiante") != null){
+if(sesion.getAttribute("pkeyEstudiante") != null){
 %>
 <!DOCTYPE html>
 <html lang="en">

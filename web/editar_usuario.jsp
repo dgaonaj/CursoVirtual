@@ -1,6 +1,6 @@
 <% 
 HttpSession sesion = request.getSession();
-if(sesion.getAttribute("estudiante") != null || sesion.getAttribute("docente") != null || sesion.getAttribute("administrador") != null){
+if(sesion.getAttribute("pkeyEstudiante") != null || sesion.getAttribute("pkeyDocente") != null || sesion.getAttribute("pkeyAdmin") != null){
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,23 +23,23 @@ if(sesion.getAttribute("estudiante") != null || sesion.getAttribute("docente") !
  				</div>
  				<div class="form-inline" align="center" style="margin-top: 19px; ">
  				 	  <label>Nombres:</label>	
- 					      <input type="text" class="form-control" name="nombres" placeholder="Ingrese su nombre ">
+ 					      <input type="text" class="form-control" name="nombres" placeholder="Ingrese su nombre " value="${nombres}">
                                                  	                
  					   <label>Apellidos:</label>
- 					     <input type="text" class="form-control"	name="apellidos" placeholder="Ingrese sus  apellidos">
+ 					     <input type="text" class="form-control"	name="apellidos" placeholder="Ingrese sus  apellidos" value="${apellidos}">
                  
                                  </div>
                  <div class="form-inline " align="center" style="margin-top: 19px;">
                                                                   
                                 <label>Username:</label>
-                                    <input type="text" class="form-control" name="username" placeholder="Digite su usuario">
+                                    <input type="text" class="form-control" name="username" placeholder="Digite su usuario" value="${username}">
                             
                     		  <label>Password:</label>	
- 					<input type="Password" class="form-control" name="password" placeholder="Ingrese su nueva password ">
+ 					<input type="Password" class="form-control" name="password" placeholder="Ingrese su nueva password " value="${password}"
                  </div>
                  <div class="form-inline " align="center" style="margin-top: 19px;">           
                             <label>Correo:</label>	
- 					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo ">
+ 					<input type="text" class="form-control" name="correo" placeholder="Ingrese su correo " value="${correo}">
                  </div>
                 <% if(sesion.getAttribute("estudiante") != null){  %>
                 <input type="hidden" name="tipoUsuario" value="estudiante">
@@ -49,7 +49,7 @@ if(sesion.getAttribute("estudiante") != null || sesion.getAttribute("docente") !
                 <input type="hidden" name="tipoUsuario" value="administrador">
                 <%}%>
                      <div style="margin:19px;" align="center">
-                     	<button class="btn btn-info" style="font-size: 20px;"><span class="glyphicon glyphicon-pencil" name="accion" value="editar"> Editar</span></button>
+                     	<button class="btn btn-info" style="font-size: 20px;" name="accion" value="editar"><span class="glyphicon glyphicon-pencil" name="accion" value="editar"> Editar</span></button>
                         <button class="btn btn-danger" style="font-size: 20px;"><span class="glyphicon glyphicon-remove">Cancelar</span></button>
                      </div>
                 </form>

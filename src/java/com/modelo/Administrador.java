@@ -19,15 +19,14 @@ public class Administrador extends Usuario{
     public Administrador(String nombres, String apellidos, String correo, String tipoIdentifica, int numIdentifica, String tipoUsuario, String username, String password) {
         super(nombres, apellidos, correo, tipoIdentifica, numIdentifica, tipoUsuario, username, password);
     }
+
+    public Administrador(String username, String password) {
+        super(username, password);
+    }
     
+    @Override
     public int registrarUsuario() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int login(String username, String password) {
-        AdministradorJDBC adminJDBC = new AdministradorJDBC();
-        return adminJDBC.select(username, password);
     }
     
 }

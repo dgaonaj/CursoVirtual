@@ -5,6 +5,8 @@
  */
 package com.controlador;
 
+import com.modelo.Docente;
+import com.modelo.Estudiante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -30,30 +33,32 @@ public class ServletEditarUsuario extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String nombres = request.getParameter("nombres");
-        String apellidos = request.getParameter("apellidos");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String correo = request.getParameter("correo");
-        String accion = request.getParameter("accion");
-        String tipoUsuario = request.getParameter("tipoUsuario");
-        if(accion.equals("editar")){
-            if(tipoUsuario.equals("estudiante")){
-                String idEstudiante = request.getParameter("estudiante");
-                
-                request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);
-            }else if(tipoUsuario.equals("docente")){
-                
-                
-                String idDocente = request.getParameter("docente");
-                request.getRequestDispatcher("dashboard_docente.jsp").forward(request, response);
-            }else if(tipoUsuario.equals("administrador")){
-                
-                String idAdmin = request.getParameter("administrador");
-                request.getRequestDispatcher("dashboard_admin.jsp").forward(request, response);
+        throws ServletException, IOException {
+            String nombres = request.getParameter("nombres");
+            String apellidos = request.getParameter("apellidos");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            String correo = request.getParameter("correo");
+            
+            String accion = request.getParameter("accion");
+            
+            
+            String tipoUsuario = (String) request.getSession().getAttribute("tipoUsuario");
+           
+            if(accion.equals("editar")){
+                if(tipoUsuario.equals("estudiante")){
+                    int pkeyEstudiante = (int) request.getSession().getAttribute("pkeyEstudiante");
+                    Estudiante estu = new Estudiante();
+                    estu.editarUsuario(pkeyEstudiante, nombres, apellidos, username, password, correo);
+                    request.getRequestDispatcher("dashboard_estudiante.jsp").forward(request, response);
+                }else if(tipoUsuario.equals("docente")){
+
+                    int pkeyDocente = (int) request.getSession().getAttribute("pkeyDocente");
+                    Docente doce = new Docente();
+                    doce.editarUsuario(pkeyDocente, nombres, apellidos, username, password, correo);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                }
             }
-        }
                 
         
     }

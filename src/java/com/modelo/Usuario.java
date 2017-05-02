@@ -34,6 +34,11 @@ public abstract class Usuario {
         this.password = password;
     }
     
+    public Usuario(String username, String password){
+        this.username=username;
+        this.password=password;
+    }
+    
     public String getNombres() {
         return nombres;
     }
@@ -98,6 +103,6 @@ public abstract class Usuario {
         this.password = password;
     }
     
-    public abstract int login(String username, String password);
+    public abstract int registrarUsuario();
     
 }
