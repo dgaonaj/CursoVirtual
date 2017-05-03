@@ -105,7 +105,13 @@ public class ServletLogin extends HttpServlet {
                             mensaje="Login Correcto";
                             sesion.setAttribute("mensaje", mensaje);
                             sesion.setAttribute("pkeyAdmin", admin.getNumIdentifica());
-                            request.getRequestDispatcher("crear_cursos.jsp").forward(request, response); 
+                            sesion.setAttribute("nombres", admin.getNombres());
+                            sesion.setAttribute("apellidos", admin.getApellidos());
+                            sesion.setAttribute("username", admin.getUsername());
+                            sesion.setAttribute("password", admin.getPassword());
+                            sesion.setAttribute("correo", admin.getCorreo());
+                            sesion.setAttribute("tipoUsuario", admin.getTipoUsuario());
+                            request.getRequestDispatcher("editar_usuario.jsp").forward(request, response); 
                         }else{
                             mensaje="Login Incorrecto";
                             sesion.setAttribute("administrador", "");

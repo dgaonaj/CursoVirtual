@@ -5,7 +5,7 @@
 --%>
 <% 
 HttpSession sesion = request.getSession();
-if(sesion.getAttribute("administrador") != null){
+if(sesion.getAttribute("pkeyAdmin") != null){
 %>
 <!DOCTYPE html>
 <html lang="en">
