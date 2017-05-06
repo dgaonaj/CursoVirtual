@@ -1,6 +1,6 @@
 <% 
 HttpSession sesion = request.getSession();
-if(sesion.getAttribute("pkeyAdmin") != null){
+if(sesion.getAttribute("pkeyEstudiante") != null){
 %>
 
 
