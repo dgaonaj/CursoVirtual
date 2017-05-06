@@ -1,4 +1,5 @@
 #cursovirtual
-nbproject/private/
-/dist/
+/nbproject/private/
+/dist
+*.class
 
